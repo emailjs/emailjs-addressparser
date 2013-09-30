@@ -4,6 +4,12 @@
 
 ## Usage
 
+### Volo
+
+Install with [volo](http://volojs.org/):
+
+    volo add Kreata/addressparser
+
 ### AMD
 
 Require [addressparser.js](addressparser.js) as `addressparser`

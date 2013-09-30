@@ -68,6 +68,14 @@ the result is
 
 ## Tests
 
+Download `addressparser` source and install dependencies
+
+```bash
+git clone git@github.com:Kreata/addressparser.git
+cd addressparser
+volo install
+```
+
 Tests are handled by QUnit. Open [testrunner.html](tests/testrunner.html) to run the tests.
 
 ## License

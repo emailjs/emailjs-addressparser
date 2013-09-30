@@ -8,7 +8,7 @@
 
 Install with [volo](http://volojs.org/):
 
-    volo add Kreata/addressparser
+    volo add Kreata/addressparser/v0.1.0
 
 ### AMD
 

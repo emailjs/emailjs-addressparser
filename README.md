@@ -64,3 +64,12 @@ the result is
             ]
         }
     ]
+
+
+## Tests
+
+Tests are handled by QUnit. Open [testrunner.html](tests/testrunner.html) to run the tests.
+
+## License
+
+**MIT**

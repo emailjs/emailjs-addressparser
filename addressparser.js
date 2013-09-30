@@ -17,10 +17,13 @@
 
 // AMD shim
 (function(root, factory) {
+
+    "use strict";
+
     if (typeof define === 'function' && define.amd) {
         define(factory);
     } else {
-        root.addressParser = factory();
+        root.addressparser = factory();
     }
 }(this, function() {
 
@@ -29,7 +32,7 @@
     /**
      * Defines an object as a namespace for the parsing function
      */
-    var addressParser = {};
+    var addressparser = {};
 
     /**
      * Parses structured e-mail addresses from an address field
@@ -45,8 +48,8 @@
      * @param {String} str Address field
      * @return {Array} An array of address objects
      */
-    addressParser.parse = function(str){
-        var tokenizer = new addressParser.Tokenizer(str),
+    addressparser.parse = function(str){
+        var tokenizer = new addressparser.Tokenizer(str),
             tokens = tokenizer.tokenize();
 
         var addresses = [],
@@ -69,7 +72,7 @@
         }
 
         addresses.forEach(function(address){
-            address = addressParser._handleAddress(address);
+            address = addressparser._handleAddress(address);
             if(address.length){
                 parsedAddresses = parsedAddresses.concat(address);
             }
@@ -84,7 +87,7 @@
      * @param {Array} tokens Tokens object
      * @return {Object} Address object
      */
-    addressParser._handleAddress = function(tokens){
+    addressparser._handleAddress = function(tokens){
         var token,
             isGroup = false,
             state = "text",
@@ -135,7 +138,7 @@
             data.text = data.text.join(" ");
             addresses.push({
                 name: data.text || address.name,
-                group: data.group.length ? addressParser.parse(data.group.join(",")) : []
+                group: data.group.length ? addressparser.parse(data.group.join(",")) : []
             });
         }else{
             // If no address was found, try to detect one from regular text
@@ -212,7 +215,7 @@
      * @constructor
      * @param {String} str Address field string
      */
-    addressParser.Tokenizer = function(str){
+    addressparser.Tokenizer = function(str){
 
         this.str = (str || "").toString();
         this.operatorCurrent = "";
@@ -227,7 +230,7 @@
     /**
      * Operator tokens and which tokens are expected to end the sequence
      */
-    addressParser.Tokenizer.prototype.operators = {
+    addressparser.Tokenizer.prototype.operators = {
         "\"": "\"",
         "(": ")",
         "<": ">",
@@ -240,7 +243,7 @@
      *
      * @return {Array} An array of operator|text tokens
      */
-    addressParser.Tokenizer.prototype.tokenize = function(){
+    addressparser.Tokenizer.prototype.tokenize = function(){
         var chr, list = [];
         for(var i=0, len = this.str.length; i<len; i++){
             chr = this.str.charAt(i);
@@ -262,7 +265,7 @@
      *
      * @param {String} chr Character from the address field
      */
-    addressParser.Tokenizer.prototype.checkChar = function(chr){
+    addressparser.Tokenizer.prototype.checkChar = function(chr){
         if((chr in this.operators || chr == "\\") && this.escaped){
             this.escaped = false;
         }else if(this.operatorExpecting && chr == this.operatorExpecting){
@@ -308,5 +311,5 @@
         this.escaped = false;
     };
 
-    return addressParser;
+    return addressparser;
 }));

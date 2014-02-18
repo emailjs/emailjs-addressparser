@@ -10,6 +10,10 @@ Install with [volo](http://volojs.org/):
 
     volo add Kreata/addressparser/v0.1.0
 
+or with [Bower](http://bower.io/)
+
+    bower install addressparser
+
 ### AMD
 
 Require [addressparser.js](addressparser.js) as `addressparser`

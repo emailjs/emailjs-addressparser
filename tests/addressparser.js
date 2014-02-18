@@ -70,3 +70,12 @@ test("Apostrophe in name", function(){
         expected = [{name: "O'Neill", address:""}];
     deepEqual(addressparser.parse(input), expected);
 });
+
+test("Particularily bad input, unescaped colon", function(){
+    var input = "FirstName Surname-WithADash :: Company <firstname@company.com>",
+        expected = [ { name: 'FirstName Surname-WithADash',
+                group: 
+                 [ { name: undefined,
+                     group: [ { address: 'firstname@company.com', name: 'Company' } ] } ] } ];
+    deepEqual(addressparser.parse(input), expected);
+});

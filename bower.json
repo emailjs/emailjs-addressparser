@@ -1,0 +1,26 @@
+{
+  "name": "addressparser",
+  "main": "addressparser.js",
+  "version": "0.1.1",
+  "homepage": "https://github.com/Kreata/addressparser",
+  "authors": [
+    "Andris Reinman <andris@kreata.ee>"
+  ],
+  "description": "Parse rfc2822 address fields",
+  "keywords": [
+    "RFC822",
+    "RFC2822",
+    "mime",
+    "address",
+    "parser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".travis.yml"
+  ]
+}

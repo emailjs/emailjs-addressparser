@@ -5,6 +5,9 @@
     "author": "Andris Reinman <andris@kreata.ee>",
     "keywords": ["RFC822", "RFC2822", "mime", "address", "parser"],
     "license": "MIT",
+    "scripts": {
+        "test": "grunt"
+    },
     "repository": {
         "type": "git",
         "url": "git://github.com/whiteout-io/addressparser.git"

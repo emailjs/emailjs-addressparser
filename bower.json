@@ -1,8 +1,8 @@
 {
   "name": "addressparser",
   "main": "addressparser.js",
-  "version": "0.1.1",
-  "homepage": "https://github.com/Kreata/addressparser",
+  "version": "0.1.2",
+  "homepage": "https://github.com/whiteout-io/addressparser",
   "authors": [
     "Andris Reinman <andris@kreata.ee>"
   ],

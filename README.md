@@ -10,15 +10,15 @@ NB! This module does not decode any mime-word or punycode encoded strings, it is
 
 ### [volo](http://volojs.org/):
 
-    volo add whiteout-io/addressparser/v0.1.0
+    volo add whiteout-io/addressparser/0.1.2
 
 ### [Bower](http://bower.io/):
 
-    bower install --save addressparser
+    bower install git@github.com:whiteout-io/addressparser.git#0.1.2
 
 ### [npm](https://www.npmjs.org/):
 
-    npm install --save addressparser
+    npm install https://github.com/whiteout-io/addressparser/tarball/0.1.2
 
 ## Usage
 

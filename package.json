@@ -1,4 +1,5 @@
 {
+    "name": "addressparser",
     "version": "0.1.2",
     "homepage": "https://github.com/whiteout-io/addressparser",
     "description": "Parse rfc2822 address fields",

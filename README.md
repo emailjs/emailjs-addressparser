@@ -4,6 +4,8 @@ UMD module that allows you to parse mime formatted e-mail address lists in node 
 
 NB! This module does not decode any mime-word or punycode encoded strings, it is only a basic parser for parsing the base data.
 
+[![Build Status](https://travis-ci.org/whiteout-io/addressparser.png?branch=master)](https://travis-ci.org/whiteout-io/addressparser)
+
 ## Installation
 
 ### [volo](http://volojs.org/):

@@ -1,6 +1,6 @@
 # Address parser
 
-UMD module that allows you to parse mime formatted e-mail address lists in node and the browser.
+`addressparser` is a UMD module that allows you to parse mime formatted e-mail address lists in node and the browser.
 
 NB! This module does not decode any mime-word or punycode encoded strings, it is only a basic parser for parsing the base data.
 

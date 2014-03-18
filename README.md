@@ -10,7 +10,7 @@ NB! This module does not decode any mime-word or punycode encoded strings, it is
 
 ### [volo](http://volojs.org/):
 
-    volo add Kreata/addressparser/v0.1.0
+    volo add whiteout-io/addressparser/v0.1.0
 
 ### [Bower](http://bower.io/):
 

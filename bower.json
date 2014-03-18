@@ -1,6 +1,6 @@
 {
   "name": "addressparser",
-  "main": "addressparser.js",
+  "main": "src/addressparser.js",
   "version": "0.1.2",
   "homepage": "https://github.com/whiteout-io/addressparser",
   "authors": [

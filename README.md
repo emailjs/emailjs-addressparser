@@ -10,15 +10,15 @@ NB! This module does not decode any mime-word or punycode encoded strings, it is
 
 ### [volo](http://volojs.org/):
 
-    volo add whiteout-io/addressparser/0.1.2
+    volo add whiteout-io/addressparser/v0.1.2
 
 ### [Bower](http://bower.io/):
 
-    bower install git@github.com:whiteout-io/addressparser.git#0.1.2
+    bower install git@github.com:whiteout-io/addressparser.git#v0.1.2
 
 ### [npm](https://www.npmjs.org/):
 
-    npm install https://github.com/whiteout-io/addressparser/tarball/0.1.2
+    npm install https://github.com/whiteout-io/addressparser/tarball/v0.1.2
 
 ## Usage
 
@@ -77,11 +77,13 @@ And when using groups
     copies of the Software, and to permit persons to whom the Software is
     furnished to do so, subject to the following conditions:
 
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
-
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.

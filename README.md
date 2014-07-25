@@ -8,17 +8,9 @@ NB! This module does not decode any mime-word or punycode encoded strings, it is
 
 ## Installation
 
-### [volo](http://volojs.org/):
-
-    volo add whiteout-io/addressparser/v0.1.2
-
-### [Bower](http://bower.io/):
-
-    bower install git@github.com:whiteout-io/addressparser.git#v0.1.2
-
 ### [npm](https://www.npmjs.org/):
 
-    npm install https://github.com/whiteout-io/addressparser/tarball/v0.1.2
+    npm install https://github.com/whiteout-io/addressparser/tarball/<TAG_NAME>
 
 ## Usage
 

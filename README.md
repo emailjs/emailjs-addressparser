@@ -10,13 +10,13 @@ NB! This module does not decode any mime-word or punycode encoded strings, it is
 
 ### [npm](https://www.npmjs.org/):
 
-    npm install https://github.com/whiteout-io/addressparser/tarball/<TAG_NAME>
+    npm install --save wo-addressparser
 
 ## Usage
 
 ### node.js and AMD
 
-    require('addressparser');
+    require('wo-addressparser');
 
 ### Global context
 

@@ -62,7 +62,7 @@
                 expect(addressparser.parse(input)).to.deep.equal(expected);
             });
 
-            it("should handle emtpy group correctly", function() {
+            it("should handle empty group correctly", function() {
                 var input = "Undisclosed:;",
                     expected = [{
                         "name": "Undisclosed",
@@ -143,7 +143,7 @@
                 expect(addressparser.parse(input)).to.deep.equal(expected);
             });
 
-            it("should handle particularily bad input, unescaped colon correctly", function() {
+            it("should handle particularly bad input, unescaped colon correctly", function() {
                 var input = "FirstName Surname-WithADash :: Company <firstname@company.com>",
                     expected = [{
                         name: 'FirstName Surname-WithADash',

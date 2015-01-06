@@ -53,6 +53,15 @@
                 expect(addressparser.parse(input)).to.deep.equal(expected);
             });
 
+            it("should handle quoted semicolons correctly", function() {
+                var input = "\"reinman; andris\" <andris@tr.ee>",
+                    expected = [{
+                        name: "reinman; andris",
+                        address: "andris@tr.ee"
+                    }];
+                expect(addressparser.parse(input)).to.deep.equal(expected);
+            });
+
             it("should handle unquoted name, unquoted address correctly", function() {
                 var input = "andris andris@tr.ee",
                     expected = [{
@@ -86,6 +95,18 @@
                 expect(addressparser.parse(input)).to.deep.equal(expected);
             });
 
+            it("should handle semicolon as a delimiter", function() {
+                var input = "andris@tr.ee; andris@example.com;",
+                    expected = [{
+                        address: "andris@tr.ee",
+                        name: ""
+                    }, {
+                        address: "andris@example.com",
+                        name: ""
+                    }];
+                expect(addressparser.parse(input)).to.deep.equal(expected);
+            });
+
             it("should handle mixed group correctly", function() {
                 var input = "Test User <test.user@mail.ee>, Disclosed:andris@tr.ee, andris@example.com;,,,, Undisclosed:;",
                     expected = [{
@@ -103,6 +124,30 @@
                     }, {
                         "name": "Undisclosed",
                         "group": []
+                    }];
+                expect(addressparser.parse(input)).to.deep.equal(expected);
+            });
+
+            it("semicolon as delimiter should not break group parsing ", function() {
+                var input = "Test User <test.user@mail.ee>; Disclosed:andris@tr.ee, andris@example.com;,,,, Undisclosed:; bob@example.com;",
+                    expected = [{
+                        "address": "test.user@mail.ee",
+                        "name": "Test User"
+                    }, {
+                        "name": "Disclosed",
+                        "group": [{
+                            "address": "andris@tr.ee",
+                            "name": ""
+                        }, {
+                            "address": "andris@example.com",
+                            "name": ""
+                        }]
+                    }, {
+                        "name": "Undisclosed",
+                        "group": []
+                    }, {
+                        "address": "bob@example.com",
+                        "name": ""
                     }];
                 expect(addressparser.parse(input)).to.deep.equal(expected);
             });

@@ -8,15 +8,15 @@ NB! This module does not decode any mime-word or punycode encoded strings, it is
 
 ## Installation
 
-### [npm](https://www.npmjs.org/):
-
-    npm install --save wo-addressparser
-
 ## Usage
+
+```
+npm install --save emailjs-addressparser
+```
 
 ### node.js and AMD
 
-    require('wo-addressparser');
+    require('emailjs-addressparser');
 
 ### Global context
 
@@ -35,10 +35,10 @@ For example:
 
     // returns
     [{
-        name: "Bach, Sebastian", 
+        name: "Bach, Sebastian",
         address: "sebu@example.com"
     }, {
-        name: "Mozzie", 
+        name: "Mozzie",
         address: "mozart@example.com"
     }]
 

@@ -26,7 +26,7 @@
     } else if (typeof exports === 'object') {
         module.exports = factory();
     } else {
-        root.addressparser = factory();
+        root['emailjs-addressparser'] = factory();
     }
 }(this, function() {
     "use strict";

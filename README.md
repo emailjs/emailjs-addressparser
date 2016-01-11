@@ -21,7 +21,7 @@ npm install --save emailjs-addressparser
 ### Global context
 
     // exposes global variable addressparser
-    <script src="addressparser.js"></script>
+    <script src="emailjs-addressparser.js"></script>
 
 ### addressparser #parse()
 

@@ -2,9 +2,9 @@
     "use strict";
 
     if (typeof define === "function" && define.amd) {
-        define(['chai', 'addressparser'], factory);
+        define(['chai', 'emailjs-addressparser'], factory);
     } else if (typeof exports === 'object') {
-        factory(require('chai'), require('../src/addressparser'));
+        factory(require('chai'), require('../src/emailjs-addressparser'));
     }
 }(this, function(chai, addressparser) {
     'use strict';

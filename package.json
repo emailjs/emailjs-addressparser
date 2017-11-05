@@ -1,29 +1,43 @@
 {
-    "name": "emailjs-addressparser",
-    "version": "1.0.1",
-    "homepage": "https://github.com/emailjs/emailjs-addressparser",
-    "description": "Parse rfc2822 address fields",
-    "author": "Andris Reinman <andris@kreata.ee>",
-    "keywords": ["RFC822", "RFC2822", "mime", "address", "parser"],
-    "license": "MIT",
-    "scripts": {
-        "test": "grunt"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/emailjs/emailjs-addressparser.git"
-    },
-    "main": "src/emailjs-addressparser",
-    "dependencies": {},
-    "devDependencies": {
-        "chai": "~1.8.1",
-        "grunt": "~0.4.1",
-        "grunt-mocha-phantomjs": "~0.4.0",
-        "grunt-contrib-connect": "~0.6.0",
-        "grunt-contrib-jshint": "~0.8.0",
-        "grunt-mocha-test": "~0.8.1",
-        "mocha": "~1.16.2",
-        "phantomjs": "~1.9.7-1",
-        "requirejs": "~2.1.10"
-    }
+  "name": "emailjs-addressparser",
+  "version": "2.0.0",
+  "homepage": "https://github.com/emailjs/emailjs-addressparser",
+  "description": "Parse rfc2822 address fields",
+  "author": "Andris Reinman <andris@kreata.ee>",
+  "keywords": [
+    "RFC822",
+    "RFC2822",
+    "mime",
+    "address",
+    "parser"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "$(npm bin)/standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "$(npm bin)/mocha './src/*-unit.js' --reporter spec --require babel-register testutils.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/emailjs/emailjs-addressparser.git"
+  },
+  "main": "./src/addressparser",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "6.26.0",
+    "chai": "4.1.2",
+    "mocha": "4.0.1",
+    "standard": "10.0.3"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "before",
+      "beforeAll",
+      "afterAll",
+      "after",
+      "expect"
+    ]
+  }
 }

@@ -4,7 +4,7 @@
 
 NB! This module does not decode any mime-word or punycode encoded strings, it is only a basic parser for parsing the base data.
 
-[![Build Status](https://travis-ci.org/whiteout-io/addressparser.png?branch=master)](https://travis-ci.org/whiteout-io/addressparser)
+[![Build Status](https://travis-ci.org/emailjs/emailjs-addressparser.png?branch=master)](https://travis-ci.org/emailjs/emailjs-addressparser)
 
 ## Installation
 

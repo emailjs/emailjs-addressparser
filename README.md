@@ -1,13 +1,9 @@
 # Address parser
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/emailjs/emailjs-addressparser.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/emailjs/emailjs-addressparser.png?branch=master)](https://travis-ci.org/emailjs/emailjs-addressparser)
-
-`emailjs-addressparser` is a UMD module that allows you to parse mime formatted e-mail address lists in node and the browser.
-
-NB! This module does not decode any mime-word or punycode encoded strings, it is only a basic parser for parsing the base data.
+[![Greenkeeper badge](https://badges.greenkeeper.io/emailjs/emailjs-addressparser.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/emailjs/emailjs-addressparser.png?branch=master)](https://travis-ci.org/emailjs/emailjs-addressparser) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)  [![ES6+](https://camo.githubusercontent.com/567e52200713e0f0c05a5238d91e1d096292b338/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f65732d362b2d627269676874677265656e2e737667)](https://kangax.github.io/compat-table/es6/)
 
 
-## Installation
+`emailjs-addressparser` allows you to parse mime formatted e-mail address lists. This module does not decode any mime-word or punycode encoded strings, it is only a basic parser for parsing the base data.
 
 ## Usage
 
@@ -15,49 +11,46 @@ NB! This module does not decode any mime-word or punycode encoded strings, it is
 npm install --save emailjs-addressparser
 ```
 
-### node.js and AMD
+### parse
 
-    require('emailjs-addressparser');
+```
+import parse from "emailjs-addressparser"
+```
 
-### Global context
+Parsing Addresses w/o groups:
 
-    // exposes global variable addressparser
-    <script src="emailjs-addressparser.js"></script>
+> `String -> [{name: String, address: String}]`
 
-### addressparser #parse()
-
-Parses a list of mime formatted e-mail addresses. Returned array includes objects in the form of `{name, address}`. If the address is a [group](http://tools.ietf.org/html/rfc2822#appendix-A.1.3), instead of `address` parameter, `group` parameter (array) with nested address objects is used.
-
-    addressparser.parse(addressString) -> String
-
-For example:
-
-    addressparser.parse(('"Bach, Sebastian" <sebu@example.com>, mozart@example.com (Mozzie)');
-
-    // returns
-    [{
-        name: "Bach, Sebastian",
-        address: "sebu@example.com"
-    }, {
-        name: "Mozzie",
-        address: "mozart@example.com"
-    }]
+```
+parse(('"Bach, Sebastian" <sebu@example.com>, mozart@example.com (Mozzie)')
+->
+  [{
+    name: "Bach, Sebastian",
+    address: "sebu@example.com"
+  }, {
+    name: "Mozzie",
+    address: "mozart@example.com"
+  }]
+```
 
 And when using groups
 
-    addressparser.parse('Composers:"Bach, Sebastian" <sebu@example.com>, mozart@example.com (Mozzie);');
+> `String -> [{name: String, group: [{name: String, address: String}]}]`
 
-    // returns
-    [{
-        name: "Composers",
-        group: [{
-            address: "sebu@example.com",
-            name: "Bach, Sebastian"
-        }, {
-            address: "mozart@example.com",
-            name: "Mozzie"
-        }]
+```
+parse('Composers:"Bach, Sebastian" <sebu@example.com>, mozart@example.com (Mozzie);')
+->
+  [{
+    name: "Composers",
+    group: [{
+      address: "sebu@example.com",
+      name: "Bach, Sebastian"
+    }, {
+      address: "mozart@example.com",
+      name: "Mozzie"
     }]
+  }]
+```
 
 ## License
 

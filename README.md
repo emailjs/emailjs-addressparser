@@ -1,12 +1,11 @@
 # Address parser
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/emailjs/emailjs-addressparser.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/emailjs/emailjs-addressparser.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/emailjs/emailjs-addressparser.png?branch=master)](https://travis-ci.org/emailjs/emailjs-addressparser)
 
 `emailjs-addressparser` is a UMD module that allows you to parse mime formatted e-mail address lists in node and the browser.
 
 NB! This module does not decode any mime-word or punycode encoded strings, it is only a basic parser for parsing the base data.
 
-[![Build Status](https://travis-ci.org/emailjs/emailjs-addressparser.png?branch=master)](https://travis-ci.org/emailjs/emailjs-addressparser)
 
 ## Installation
 

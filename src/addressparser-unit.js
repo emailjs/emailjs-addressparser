@@ -189,4 +189,13 @@ describe('addressparser', () => {
     }]
     expect(parse(input)).to.deep.equal(expected)
   })
+
+  it('should handle phishing address with two less than input correctly', () => {
+    const input = '<phising@address.com> <real@address.com>'
+    const expected = [{
+      address: 'real@address.com',
+      name: '<phising@address.com>'
+    }]
+    expect(parse(input)).to.deep.equal(expected)
+  })
 })

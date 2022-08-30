@@ -138,9 +138,11 @@ function _handleAddress (tokens) {
       data.comment = []
     }
 
-    // Keep only the first address occurence, push others to regular text
+    // Keep only the last address occurence, push others to regular text
     if (data.address.length > 1) {
-      data.text = data.text.concat(data.address.splice(1))
+      const address = data.address.pop()
+      data.text = data.text.concat(data.address.map(fakeAddress => `<${fakeAddress}>`))
+      data.address = [address]
     }
 
     // Join values with spaces

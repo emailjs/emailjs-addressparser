@@ -189,4 +189,37 @@ describe('addressparser', () => {
     }]
     expect(parse(input)).to.deep.equal(expected)
   })
+
+  it('should handle phishing address with name looking like an address', () => {
+    const input = '<phising@address.com> <real@address.com>'
+    const expected = [{
+      address: 'real@address.com',
+      name: '<phising@address.com>'
+    }]
+    expect(parse(input)).to.deep.equal(expected)
+  })
+
+  it('should handle phishing address and multiple addresses 1', () => {
+    const input = 'me@example.com, <phising@address.com> <real@address.com>'
+    const expected = [{
+      address: 'me@example.com',
+      name: ''
+    }, {
+      address: 'real@address.com',
+      name: '<phising@address.com>'
+    }]
+    expect(parse(input)).to.deep.equal(expected)
+  })
+
+  it('should handle phishing address and multiple addresses 2', () => {
+    const input = '<phising@address.com> <real@address.com>, me@example.com'
+    const expected = [{
+      address: 'real@address.com',
+      name: '<phising@address.com>'
+    }, {
+      address: 'me@example.com',
+      name: ''
+    }]
+    expect(parse(input)).to.deep.equal(expected)
+  })
 })
